@@ -15,7 +15,7 @@
             <?php foreach ($products as $product): ?> 
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="/img/<?= $product->img ?>" alt="<?= $product->name ?>" /></a>
+                    <a href="<?= \yii\helpers\Url::to(['shop/item', 'id'=>$product->id])?>"><img class="card-img-top" src="/img/<?= $product->img ?>" alt="<?= $product->name ?>" /></a>
                     <div class="card-body">
                         <h4 class="card-title"><?= $product->name ?></h4>
                         <p class="card-text">Категория</p>

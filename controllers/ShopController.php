@@ -39,9 +39,11 @@ class ShopController extends Controller
      *
      * @return string
      */
-    public function actionItem()
+    public function actionItem($id)
     {
-        return $this->render('item');
+        //$id = \Yii::$app->request->get('id');
+        $product = Product::find()->where(['id' => $id])->one();
+        return $this->render('item', ['product' => $product]);
     }
 
 }
